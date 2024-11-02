@@ -1,0 +1,11 @@
+@use "./../../scss/variables";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  z-index: 99;
+  background-color: variables.$bg-info;
+}

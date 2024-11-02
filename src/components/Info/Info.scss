@@ -1,0 +1,77 @@
+@use "./../../scss/variables";
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+  background-color: variables.$bg-info;
+  padding-bottom: 120px;
+
+  @media (max-width: 850px) {
+    flex-direction: column-reverse;
+  }
+
+  .main-info {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    // flex-grow: 3;
+    flex-shrink: 1;
+
+    @media (max-width: 850px) {
+      flex-basis: 1;
+      text-align: center;
+      align-items: center;
+    }
+
+    .main-info-title {
+      font-size: 3.6rem;
+      line-height: 4.1rem;
+      color: variables.$color-info-title;
+    }
+
+    .main-info-describe {
+      font-size: 1.2rem;
+      color: variables.$color-info-describe;
+    }
+
+    .btn-get-started {
+      width: 200px;
+      height: 40px;
+      border-radius: 20px;
+      color: variables.$color-main;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  img {
+    margin-right: -200px;
+    height: 480px;
+
+    @media (max-width: 1220px) {
+      margin-right: -200px;
+      height: 380px;
+    }
+
+    @media (max-width: 1015px) {
+      margin-right: -200px;
+      height: 320px;
+    }
+
+    @media (max-width: 850px) {
+      margin-right: -300px;
+      height: 320px;
+    }
+
+    @media (max-width: 525px) {
+      margin-right: -150px;
+      height: 300px;
+    }
+  }
+}

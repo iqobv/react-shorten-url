@@ -1,0 +1,21 @@
+@use "./../../scss/variables";
+
+@mixin btn-effect {
+  filter: saturate(170%);
+}
+
+.btn {
+  background-color: variables.$color-cyan;
+  border: none;
+  transition: all 0.3s;
+
+  &:focus-visible {
+    @include btn-effect();
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @include btn-effect();
+    }
+  }
+}

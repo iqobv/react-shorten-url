@@ -1,0 +1,43 @@
+@use "./../../../scss/variables";
+
+.footer-nav {
+  .footer-nav-list {
+    display: flex;
+    gap: 50px;
+    @media (max-width: 940px) {
+      gap: 30px;
+    }
+    @media (max-width: 510px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-nav-list-item {
+      .footer-nav-list-item-title {
+        color: variables.$color-footer-head-link;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .footer-nav-list-item-sublinks {
+        margin-top: 15px;
+
+        .footer-nav-list-item-sublinks-item {
+          padding: 3px 0;
+
+          .footer-nav-list-item-sublinks-item-link {
+            color: variables.$color-footer-sub-link;
+            font-size: 1rem;
+            transition: all 0.3s;
+
+            @media (hover: hover) {
+              &:hover {
+                color: variables.$color-cyan;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

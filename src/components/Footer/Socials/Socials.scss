@@ -1,0 +1,28 @@
+@use "./../../../scss/variables";
+
+.nav-socials {
+  .nav-socials-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 1100px) and (min-width: 700px) {
+      flex-direction: column;
+    }
+
+    .nav-socials-list-item {
+      .nav-socials-list-item-link {
+        user-select: none;
+        fill: variables.$color-main;
+        transition: all 0.3s;
+
+        @media (hover: hover) {
+          &:hover {
+            fill: variables.$color-cyan;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+$color-cyan: hsl(180, 66%, 49%);
+
+$bg-body: hsl(0, 0%, 91%);
+$bg-info: hsl(0, 0%, 100%);
+
+$bg-nav-mobile: hsl(257, 27%, 26%);
+$bg-components: hsl(257, 27%, 26%);
+$bg-footer: hsl(255, 11%, 22%);
+
+$color-header-logo: hsl(260, 8%, 14%);
+
+$color-main: hsl(0, 0%, 100%);
+
+$color-btn-sign-up: hsl(0, 0%, 100%);
+$color-btn-login: hsl(257, 7%, 63%);
+$color-link: hsl(257, 7%, 63%);
+
+$color-link-hover: hsl(260, 8%, 14%);
+
+$color-info-title: hsl(255, 11%, 22%);
+$color-info-describe: hsl(255, 11%, 22%);
+
+$color-footer-head-link: hsl(0, 0%, 100%);
+$color-footer-sub-link: hsl(257, 7%, 63%);
+
+:root {
+  --img-bg-shorten: url("src/assets/images/backgrounds/bg-shorten-desktop.svg");
+  --img-bg-boost: url("src/assets/images/backgrounds/bg-boost-desktop.svg");
+}
+
+@media (max-width: 850px) {
+  :root {
+    --img-bg-shorten: url("src/assets/images/backgrounds/bg-shorten-mobile.svg");
+    --img-bg-boost: url("src/assets/images/backgrounds/bg-boost-mobile.svg");
+  }
+}

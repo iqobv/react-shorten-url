@@ -1,0 +1,69 @@
+@use "./../../../../scss/variables";
+
+.hamburger-react {
+  background: transparent;
+  border: none;
+}
+
+.nav-mobile-container {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background: variables.$bg-nav-mobile;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+
+    .nav-mobile-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 40px;
+      position: relative;
+      width: 100%;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: variables.$color-link;
+        bottom: -25px;
+      }
+
+      .nav-mobile-link-item {
+        .nav-mobile-link-item-link {
+          color: variables.$color-main;
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+
+      .btn-login {
+        color: variables.$color-main;
+      }
+    }
+  }
+}

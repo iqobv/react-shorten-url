@@ -1,0 +1,9 @@
+@use "./../../../scss/variables";
+
+.logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 60px;
+  fill: variables.$color-header-logo;
+}
