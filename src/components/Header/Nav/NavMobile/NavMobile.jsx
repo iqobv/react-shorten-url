@@ -5,14 +5,20 @@ import HeaderButtons from "../../HeaderButtons/HeaderButtons";
 
 import "./NavMobile.scss";
 
-const NavMobile = ({ links, handleOpenMenu }) => {
+const NavMobile = ({ links }) => {
   const [isOpen, setOpen] = useState(false);
+
+  const closeMenuOnOverlay = (e) => {
+    if (e.target.classList.contains("nav-mobile-container")) {
+      setOpen(false);
+    }
+  };
 
   return (
     <>
       <Hamburger toggled={isOpen} toggle={setOpen} />
       {isOpen && (
-        <div className="nav-mobile-container">
+        <div onClick={closeMenuOnOverlay} className="nav-mobile-container">
           <nav className="nav-mobile">
             <ul className="nav-mobile-links">
               {links.map((link, index) => (

@@ -15,7 +15,7 @@ const FooterNav = () => {
               {link.subLinks.map((sublink, index) => (
                 <li key={index} className="footer-nav-list-item-sublinks-item">
                   <a
-                    href="#"
+                    href={`#${sublink.toLowerCase()}`}
                     className="footer-nav-list-item-sublinks-item-link"
                   >
                     {sublink}

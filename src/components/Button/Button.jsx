@@ -1,8 +1,10 @@
 import styles from "./Button.module.scss";
 
-const Button = ({ data, btnClassName }) => {
+const Button = ({ onClick, data, btnClassName, disabled }) => {
   return (
     <button
+      disabled={disabled}
+      onClick={onClick}
       className={`${styles.btn} ${
         btnClassName !== "" ? `btn-${btnClassName}` : ""
       }`}

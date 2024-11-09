@@ -1,4 +1,5 @@
-import Button from "../../Button/Button";
+import CopyButton from "./CopyButton/CopyButton";
+
 import "./History.scss";
 
 const History = ({ history }) => {
@@ -10,21 +11,21 @@ const History = ({ history }) => {
         {history.map((el, index) => (
           <li key={index} className="history-list-item">
             <a
-              href={el.fullLink}
+              href={el.data.full}
               target="_blank"
               className="history-list-item-full-link"
             >
-              {el.fullLink}
+              {el.data.full}
             </a>
             <div className="result-div">
               <a
-                href={el.shortenLink}
+                href={el.data.url}
                 target="_blank"
                 className="history-list-item-shorten-link"
               >
-                {el.shortenLink}
+                {el.data.url}
               </a>
-              <Button data={"Copy"} btnClassName={"copy"} />
+              <CopyButton history={el} />
             </div>
           </li>
         ))}

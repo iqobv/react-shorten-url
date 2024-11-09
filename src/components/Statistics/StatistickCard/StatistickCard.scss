@@ -16,6 +16,11 @@
     width: 300px;
   }
 
+  @media (max-width: 345px) {
+    width: 200px;
+    padding: 30px 10px;
+  }
+
   @media (min-width: 1270px) {
     &:nth-child(1) {
       transform: translateY(-40px);
@@ -46,6 +51,9 @@
       height: 60px;
       left: 41%;
     }
+    @media (max-width: 345px) {
+      left: 36%;
+    }
 
     img {
       width: 40px;
@@ -57,5 +65,16 @@
         height: 30px;
       }
     }
+  }
+
+  .cards-list-item-title {
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+  }
+
+  .cards-list-item-describe {
+    margin-top: 20px;
+    text-align: justify;
   }
 }

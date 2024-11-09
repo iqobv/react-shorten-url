@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: 10px;
 
-    @media (max-width: 850px) {
+    @media (max-width: 1200px) {
       width: 100%;
     }
 
@@ -23,11 +23,32 @@
       background-color: variables.$color-main;
       padding: 12px 15px;
       border-radius: 6px;
+      position: relative;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: start;
+      }
 
       .history-list-item-full-link {
         color: variables.$color-link-hover;
         font-weight: 500;
         font-size: 1.05rem;
+        position: relative;
+        width: 100%;
+        overflow-wrap: break-word;
+
+        @media (max-width: 1000px) {
+          &::after {
+            position: absolute;
+            content: "";
+            width: calc(100% + 30px);
+            height: 1px;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            bottom: -5px;
+            left: -15px;
+          }
+        }
       }
 
       .result-div {
@@ -35,21 +56,37 @@
         align-items: center;
         gap: 10px;
 
+        @media (max-width: 1000px) {
+          flex-direction: column;
+          align-items: start;
+          padding-top: 10px;
+          width: 100%;
+        }
+
         .history-list-item-shorten-link {
           color: variables.$color-cyan;
           font-weight: 500;
           font-size: 1.05rem;
+          overflow-wrap: break-word;
+          @media (max-width: 1000px) {
+            width: 100%;
+          }
         }
 
         .btn-copy {
-          width: 80px;
+          width: 120px;
           height: 30px;
           border-radius: 6px;
           font-weight: 700;
           font-size: 0.9rem;
           color: variables.$color-main;
 
-          &.active:hover {
+          @media (max-width: 1000px) {
+            width: 100%;
+            height: 40px;
+          }
+
+          &.active {
             background-color: variables.$bg-components;
           }
         }

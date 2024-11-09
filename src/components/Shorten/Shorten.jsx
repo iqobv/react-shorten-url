@@ -2,18 +2,15 @@ import History from "./History/History";
 import ShortenField from "./ShortenField/ShortenField";
 
 import "./Shorten.scss";
-
-const history = [
-  { fullLink: "dwadwad", shortenLink: "daw" },
-  { fullLink: "dwadwad", shortenLink: "daw" },
-  { fullLink: "dwadwad", shortenLink: "daw" },
-];
+import { useShorten } from "../../hooks/useShorten";
 
 const Shorten = () => {
+  const { history, error, changeFullUrl } = useShorten();
+
   return (
     <>
       <div className="shorten">
-        <ShortenField />
+        <ShortenField error={error} changeFullUrl={changeFullUrl} />
         <History history={history} />
       </div>
     </>
